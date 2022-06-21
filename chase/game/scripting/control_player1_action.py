@@ -3,7 +3,7 @@ from game.scripting.action import Action
 from game.shared.point import Point
 
 
-class ControlActorsAction(Action):
+class PlayerOneActions(Action):
     """
     An input action that controls the snake.
     

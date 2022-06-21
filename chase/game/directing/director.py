@@ -1,3 +1,8 @@
+import constants
+from game.shared.point import Point
+from game.casting.actor import Actor
+
+
 class Director:
     """A person who directs the game. 
     
@@ -39,4 +44,4 @@ class Director:
         """
         actions = script.get_actions(group)    
         for action in actions:
-            action.execute(cast, script)          
+            action.execute(cast, script)    
