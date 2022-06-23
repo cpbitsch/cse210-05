@@ -12,10 +12,11 @@ class Player2(Actor):
     Attributes:
         _points (int): The number of points the food is worth.
     """
-    def __init__(self):
+    def __init__(self, score):
         super().__init__()
         self._segments = []
         self._prepare_body()
+        self.player_score = score
 
     def get_segments(self):
         return self._segments
@@ -36,6 +37,8 @@ class Player2(Actor):
         self._segments.append(segment)
 
     def turn_head(self, velocity):
+        if (str(self._segments[0].get_velocity()) != str(velocity)):
+            self.player_score.add_points(1)
         self._segments[0].set_velocity(velocity)
     
     def _prepare_body(self):
