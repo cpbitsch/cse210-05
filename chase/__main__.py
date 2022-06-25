@@ -25,7 +25,7 @@ def main():
     score_p1 = Score(1)
     cast.add_actor("scores", score_p1)
     score_p2 = Score(2)
-    score_p2.set_position(position=Point(760,0))
+    score_p2.set_position(position=Point(1710,0))
     cast.add_actor("scores", score_p2)
     cast.add_actor("player1", Player1(score_p1))
     cast.add_actor("player2", Player2(score_p2))
