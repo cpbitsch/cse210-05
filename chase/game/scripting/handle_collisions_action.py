@@ -52,10 +52,12 @@ class HandleCollisionsAction(Action):
         for p2_segment in p2_segments:
             if p1_head.get_position().equals(p2_segment.get_position()):
                 self._is_game_over = True
+                self._winner = "player2"
 
         for p1_segment in p1_segments:
             if p2_head.get_position().equals(p1_segment.get_position()):
                 self._is_game_over = True
+                self._winner = "player1"
 
         
     def _handle_game_over(self, cast):
